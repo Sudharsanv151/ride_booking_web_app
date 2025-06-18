@@ -1,0 +1,9 @@
+<h1>All Vehicles</h1>
+<%= link_to "New Vehicle", new_vehicle_path %>
+<ul>
+  <% @vehicles.each do |vehicle| %>
+    <li>
+      <%= link_to vehicle.model, vehicle_path(vehicle) %> (Driver: <%= vehicle.user.name %>)
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,18 @@
+<%= form_with(model: vehicle, local: true) do |form| %>
+  <%= form.label :user_id %>
+  <%= form.collection_select :user_id, User.where(userable_type: "Driver"), :id, :name %><br>
+
+  <%= form.label :vehicle_type %>
+  <%= form.select :vehicle_type, Vehicle.vehicle_types.keys.map { |k| [k.titleize, k] } %><br>
+
+  <%= form.label :model %>
+  <%= form.text_field :model %><br>
+
+  <%= form.label :licence_plate %>
+  <%= form.text_field :licence_plate %><br>
+
+  <%= form.label :capacity %>
+  <%= form.text_field :capacity %><br>
+
+  <%= form.submit %>
+<% end %>

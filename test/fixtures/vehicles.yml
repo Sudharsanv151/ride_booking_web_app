@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  vehicle_type: 1
+  model: MyString
+  licence_plate: MyString
+  capacity: MyString
+
+two:
+  user: two
+  vehicle_type: 1
+  model: MyString
+  licence_plate: MyString
+  capacity: MyString

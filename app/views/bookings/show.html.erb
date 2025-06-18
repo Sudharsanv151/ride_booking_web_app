@@ -1,0 +1,14 @@
+<h1>Booking #<%= @booking.id %></h1>
+
+<p><strong>Customer:</strong> <%= @booking.user.name %></p>
+<p><strong>Vehicle:</strong> <%= @booking.vehicle.model %></p>
+<p><strong>Start Location:</strong> <%= @booking.start_location %></p>
+<p><strong>End Location:</strong> <%= @booking.end_location %></p>
+<p><strong>Start Time:</strong> <%= @booking.start_time %></p>
+<p><strong>End Time:</strong> <%= @booking.end_time %></p>
+<p><strong>Price:</strong> ₹<%= @booking.price %></p>
+<p><strong>Status:</strong> <%= @booking.status ? "Confirmed" : "Pending" %></p>
+
+<%= link_to "Edit", edit_booking_path(@booking) %> |
+<%= link_to "Delete", booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" } %> |
+<%= link_to "Back", bookings_path %>

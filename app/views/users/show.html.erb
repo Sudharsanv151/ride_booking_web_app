@@ -1,0 +1,14 @@
+<h1><%= @user.name %></h1>
+
+<p>Email: <%= @user.email %></p>
+<p>Mobile: <%= @user.mobile_no %></p>
+<p>Type: <%= @user.userable_type %></p>
+<% if @user.customer? %>
+  <p>Location: <%= @user.userable.location %></p>
+<% elsif @user.driver? %>
+  <p>Licence No: <%= @user.userable.licence_no %></p>
+<% end %>
+
+<%= link_to "Edit", edit_user_path(@user) %> |
+<%= link_to "Delete", user_path(@user), method: :delete, data: { confirm: "Are you sure?" } %> |
+<%= link_to "Back to Users", users_path %>

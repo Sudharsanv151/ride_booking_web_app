@@ -1,0 +1,7 @@
+<h1><%= @vehicle.model %></h1>
+<p>Type: <%= @vehicle.vehicle_type %></p>
+<p>Plate: <%= @vehicle.licence_plate %></p>
+<p>Capacity: <%= @vehicle.capacity %></p>
+<p>Driver: <%= @vehicle.user.name %></p>
+<%= link_to "Edit", edit_vehicle_path(@vehicle) %> |
+<%= link_to "Back", vehicles_path %>
